@@ -1,14 +1,14 @@
-🐻 Memory Bear: Cognitive Edge AI on Legacy Hardware
+# 🐻 Memory Bear: Cognitive Edge AI on Legacy Hardware
 
 "Intelligence is not about how much you know, but how effectively you filter what you forget."
 
-📖 Executive Summary
+## 📖 Executive Summary
 
 Memory Bear is a local, cognitive AI agent engineered to run efficiently on highly constrained legacy hardware (Intel-based MacBook Air 2017).
 
 Standard Large Language Models (LLMs) suffer from "context amnesia" or inefficient RAG retrievals that flood the context window with noise. This project implements the Memory Bear Architecture [1], utilizing a biologically inspired Forgetting Curve to dynamically manage context. This allows a small SLM (Phi-3-Mini) to maintain coherent, long-term conversations without exceeding the 8GB RAM limit of legacy devices.
 
-🏗️ System Architecture
+## 🏗️ System Architecture
 
 The agent moves beyond simple "Golden Retriever" RAG by implementing a Cognitive Loop that mimics human memory consolidation:
 
@@ -33,7 +33,7 @@ Cortex (Semantic Memory): Uses NetworkX to build a Knowledge Graph of static fac
 
 Cognitive Filter: Applies the Ebbinghaus Decay Formula ($R = e^{-t/S}$) to prioritize "fresh" or "rehearsed" memories, discarding noise.
 
-🛠️ Engineering Case Study: Optimization for Legacy Hardware
+## 🛠️ Engineering Case Study: Optimization for Legacy Hardware
 
 Developing modern AI on a 2017 MacBook Air (Dual-Core i5, 8GB RAM, No GPU) presented specific engineering constraints.
 
@@ -67,7 +67,7 @@ macOS 12 (Monterey) Compatibility
 
 Resolved critical ABI conflicts between NumPy 2.x and PyTorch by pinning stable legacy versions.
 
-📊 Exploratory Data Analysis (EDA)
+## 📊 Exploratory Data Analysis (EDA)
 
 To validate the biological plausibility of the architecture, I conducted a simulation of the memory decay algorithms before deployment.
 
@@ -77,7 +77,7 @@ Result: Setting the retention threshold to 0.35 successfully filters 90% of "Noi
 
 Full Analysis: See notebooks/memory_dynamics_eda.ipynb
 
-🚀 Installation & Usage
+## 🚀 Installation & Usage
 
 Prerequisites:
 
@@ -90,18 +90,20 @@ macOS 12+ (Optimized for Intel Macs), Linux, or Windows
 We utilize a dedicated environment to ensure stability on older CPU architectures.
 
 # Create environment
+``
 conda create -n memory_bear_legacy python=3.10 -y
 conda activate memory_bear_legacy
-
+``
 # Install dependencies (pinned for stability)
+``
 pip install "numpy<2.0"
 pip install -r requirements.txt
-
+``
 
 2. Run the Agent
-
+``
 python main.py
-
+``
 
 Note: The first run will automatically download the quantized Phi-3-Mini model (~2.4GB). Please allow 5-10 minutes depending on your internet connection.
 
