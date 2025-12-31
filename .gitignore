@@ -1,0 +1,10 @@
+pycache/*.pyc.ipynb_checkpoints/.DS_Store
+
+# Ignore large model files
+
+models/*.gguf
+
+# Ignore database files
+
+memory_db/
+

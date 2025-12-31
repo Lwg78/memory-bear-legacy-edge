@@ -1,0 +1,14 @@
+# Core AI Logic
+
+llama-cpp-python>=0.3.0
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+networkx>=3.0
+huggingface_hub
+
+# Data Analysis
+
+numpy<2.0
+matplotlib
+pandas
+jupyter
