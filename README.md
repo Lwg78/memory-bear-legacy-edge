@@ -92,11 +92,15 @@ We utilize a dedicated environment to ensure stability on older CPU architecture
 # Create environment
 ``
 conda create -n memory_bear_legacy python=3.10 -y
+```
+```
 conda activate memory_bear_legacy
 ``
 # Install dependencies (pinned for stability)
 ``
 pip install "numpy<2.0"
+```
+```
 pip install -r requirements.txt
 ``
 
