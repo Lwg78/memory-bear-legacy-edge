@@ -22,17 +22,18 @@ The agent moves beyond simple "Golden Retriever" RAG by implementing a **Cogniti
 
 ```mermaid
 graph TD
-    A[User Input] --> B{Hippocampus Retrieval}
-    B -->|Vector Similarity| C[Episodic Memory]
-    B -->|Graph Traversal| D[Semantic Cortex]
-    C --> E[Ebbinghaus Filter]
-    E -->|Decay Check: R > 0.35?| F[Filtered Context]
-    F --> G[LLM Orchestration]
+    A["User Input"] --> B{"Hippocampus Retrieval"}
+    B -->|"Vector Similarity"| C["Episodic Memory"]
+    B -->|"Graph Traversal"| D["Semantic Cortex"]
+    C --> E["Ebbinghaus Filter"]
+    E -->|"Decay Check: R > 0.35?"| F["Filtered Context"]
+    F --> G["LLM Orchestration"]
     D --> G
-    G --> H["Generative Inference (Phi-3)"]
-    H --> I[Output to User]
-    H --> J[Consolidation (Save & Reinforce)]
+    G --> H["Generative Inference Phi-3"]
+    H --> I["Output to User"]
+    H --> J["Consolidation Save & Reinforce"]
 ```
+
 ### Core Components
 
 * **Hippocampus (Episodic Memory):** Uses `ChromaDB` to store temporal interaction logs.
