@@ -90,24 +90,24 @@ macOS 12+ (Optimized for Intel Macs), Linux, or Windows
 We utilize a dedicated environment to ensure stability on older CPU architectures.
 
 # Create environment
-``
+```
 conda create -n memory_bear_legacy python=3.10 -y
 ```
 ```
 conda activate memory_bear_legacy
-``
+```
 # Install dependencies (pinned for stability)
-``
+```
 pip install "numpy<2.0"
 ```
 ```
 pip install -r requirements.txt
-``
+```
 
 2. Run the Agent
-``
+```
 python main.py
-``
+```
 
 Note: The first run will automatically download the quantized Phi-3-Mini model (~2.4GB). Please allow 5-10 minutes depending on your internet connection.
 
