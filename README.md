@@ -29,7 +29,7 @@ graph TD
     E -->|Decay Check: R > 0.35?| F[Filtered Context]
     F --> G[LLM Orchestration]
     D --> G
-    G --> H[Generative Inference (Phi-3)]
+    G --> H["Generative Inference (Phi-3)"]
     H --> I[Output to User]
     H --> J[Consolidation (Save & Reinforce)]
 ```
